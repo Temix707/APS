@@ -1,0 +1,15 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+1
+GOOD  6 +  3 =  9...0
+2
+GOOD  4 -  3 =  1...0
+3
+BAD  5 <  3,  Result:  0, Flag: 0
+4
+Decimal: 12 >>  2,  Result:  3, Flag: 0
+Binary: 01100 >> 00010,  Result: 00011, Flag: 0
+5
+Decimal:  7 &  4,  Result:  4, Flag: 0
+Binary: 00111 & 00100,  Result: 00100, Flag: 0
+$stop called at time : 500 ns : File "C:/Vivado_project/Arithmetic-logic/Arithmetic-logic.srcs/sim_1/new/alu_tb.v" Line 98

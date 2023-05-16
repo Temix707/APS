@@ -1,0 +1,4 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+Out is 00000000000000000000000000011100
+$stop called at time : 140 ns : File "C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sim_1/new/RISC_V_tb.v" Line 23

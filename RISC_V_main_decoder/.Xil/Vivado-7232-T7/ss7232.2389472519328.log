@@ -1,0 +1,20 @@
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffdf8008a56, pid=7232, tid=5672
+#
+# JRE version: Java(TM) SE Runtime Environment (9.0+11) (build 9.0.4+11)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (9.0.4+11, mixed mode, tiered, compressed oops, g1 gc, windows-amd64)
+# Problematic frame:
+# srcscan starts
+INFO: analyzing module ALU (VERI-9002)
+INFO: analyzing module IM (VERI-9002)
+INFO: analyzing module RF (VERI-9002)
+INFO: analyzing module data_mem (VERI-9002)
+C:/Users/artem/AppData/Local/Temp/VivadoEditorAssist3141121351987937785.tmp(7): WARNING: syntax error near ) (VERI-1137)
+C:/Users/artem/AppData/Local/Temp/VivadoEditorAssist9445902179189637513.tmp(12): WARNING: macro 'ALU_AND' redefined (VERI-1295)
+INFO: analyzing module decoder_riscv (VERI-9002)
+INFO: analyzing module RISC_V_top (VERI-9002)
+C:/Users/artem/AppData/Local/Temp/VivadoEditorAssist6781174390776574912.tmp(79): INFO: undeclared symbol mux2x1_imm_I_B, assumed default net type wire (VERI-9004)
+INFO: analyzing module data_mem (VERI-9002)
+C:/Users/artem/AppData/Local/Temp/VivadoEditorAssist12133222824646964564.tmp(7): WARNING: syntax error near ) (VERI-1137)
+srcscan exits with return value 0

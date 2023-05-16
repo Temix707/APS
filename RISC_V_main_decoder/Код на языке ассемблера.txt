@@ -1,0 +1,21 @@
+li x2, 3
+li x3, 5
+li x4, 7
+li x5, 7
+
+bne x5, x2, L1
+addi x6, zero, 1
+j end
+L1: addi x6, zero, 0
+
+bne x5, x3, L2
+addi x6, zero, 1
+j end
+L2: addi x6, zero, 0
+
+bne x5, x4, L3
+addi x6, zero, 1
+j end
+L3: addi x6, zero, 0
+
+end:

@@ -1,0 +1,4 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+SUCCESS!
+$finish called at time : 12800 ns : File "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v" Line 310

@@ -1,0 +1,630 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Dec  1 03:09:47 2022
+# Process ID: 21300
+# Current directory: C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.runs/synth_1
+# Command line: vivado.exe -log RISC_V_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RISC_V_top.tcl
+# Log file: C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.runs/synth_1/RISC_V_top.vds
+# Journal file: C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source RISC_V_top.tcl -notrace
+Command: synth_design -top RISC_V_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 19904 
+WARNING: [Synth 8-2306] macro ALU_AND redefined [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/decoder_riscv.v:14]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 511.020 ; gain = 212.664
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'RISC_V_top' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:1]
+	Parameter ADR_8 bound to: 8 - type: integer 
+	Parameter ADR_5 bound to: 5 - type: integer 
+	Parameter BIT_D bound to: 32 - type: integer 
+WARNING: [Synth 8-324] index 20 out of range [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:54]
+INFO: [Synth 8-6157] synthesizing module 'decoder_riscv' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/decoder_riscv.v:75]
+INFO: [Synth 8-226] default block is never used [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/decoder_riscv.v:153]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_riscv' (1#1) [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/decoder_riscv.v:75]
+WARNING: [Synth 8-689] width (1) of port connection 'alu_op_o' does not match port width (5) of module 'decoder_riscv' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:176]
+WARNING: [Synth 8-689] width (1) of port connection 'mem_size_o' does not match port width (3) of module 'decoder_riscv' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:179]
+INFO: [Synth 8-6157] synthesizing module 'IM' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/IM.v:1]
+	Parameter ADR_8 bound to: 8 - type: integer 
+	Parameter ADR_5 bound to: 5 - type: integer 
+	Parameter BIT_D bound to: 32 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'ram.txt' is read successfully [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/IM.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'IM' (2#1) [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/IM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RF' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:1]
+	Parameter ADR_8 bound to: 8 - type: integer 
+	Parameter ADR_5 bound to: 5 - type: integer 
+	Parameter BIT_D bound to: 32 - type: integer 
+WARNING: [Synth 8-2898] ignoring malformed $readmem task: invalid memory name [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:15]
+WARNING: [Synth 8-6090] variable 'ram_rf' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'RF' (3#1) [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/ALU.v:18]
+	Parameter ADR_8 bound to: 8 - type: integer 
+	Parameter ADR_5 bound to: 5 - type: integer 
+	Parameter BIT_D bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (4#1) [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/ALU.v:18]
+INFO: [Synth 8-6157] synthesizing module 'data_mem' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/data_mem.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'data_mem' (5#1) [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/data_mem.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RISC_V_top' (6#1) [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:1]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[31]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[30]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[29]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[28]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[27]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[26]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[25]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[24]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[23]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[22]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[21]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[20]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[19]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[18]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[17]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[16]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[15]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[14]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[13]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[12]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[11]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[10]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[9]
+WARNING: [Synth 8-3331] design data_mem has unconnected port A_dm[8]
+WARNING: [Synth 8-3331] design data_mem has unconnected port WE_dm
+WARNING: [Synth 8-3331] design decoder_riscv has unconnected port fetched_instr_i[24]
+WARNING: [Synth 8-3331] design decoder_riscv has unconnected port fetched_instr_i[23]
+WARNING: [Synth 8-3331] design decoder_riscv has unconnected port fetched_instr_i[22]
+WARNING: [Synth 8-3331] design decoder_riscv has unconnected port fetched_instr_i[21]
+WARNING: [Synth 8-3331] design decoder_riscv has unconnected port fetched_instr_i[20]
+WARNING: [Synth 8-3331] design decoder_riscv has unconnected port fetched_instr_i[19]
+WARNING: [Synth 8-3331] design decoder_riscv has unconnected port fetched_instr_i[18]
+WARNING: [Synth 8-3331] design decoder_riscv has unconnected port fetched_instr_i[17]
+WARNING: [Synth 8-3331] design decoder_riscv has unconnected port fetched_instr_i[16]
+WARNING: [Synth 8-3331] design decoder_riscv has unconnected port fetched_instr_i[15]
+WARNING: [Synth 8-3331] design decoder_riscv has unconnected port fetched_instr_i[11]
+WARNING: [Synth 8-3331] design decoder_riscv has unconnected port fetched_instr_i[10]
+WARNING: [Synth 8-3331] design decoder_riscv has unconnected port fetched_instr_i[9]
+WARNING: [Synth 8-3331] design decoder_riscv has unconnected port fetched_instr_i[8]
+WARNING: [Synth 8-3331] design decoder_riscv has unconnected port fetched_instr_i[7]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port rst
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[31]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[30]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[29]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[28]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[27]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[26]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[25]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[24]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[23]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[22]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[21]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[20]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[19]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[18]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[17]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[16]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[15]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[14]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[13]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[12]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[11]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[10]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[9]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[8]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[7]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[6]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[5]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[4]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[3]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[2]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[1]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 560.574 ; gain = 262.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 560.574 ; gain = 262.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 560.574 ; gain = 262.219
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-5546] ROM "ex_op_a_sel_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ex_op_b_sel_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "alu_op_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "alu_op_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_req_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_we_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "gpr_we_a_o" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "wb_src_sel_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "illegal_instr_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "branch_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "jal_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "jalr_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "RAM" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:89]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 560.574 ; gain = 262.219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 33    
++---RAMs : 
+	               8K Bit         RAMs := 1     
++---Muxes : 
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 4     
+	  11 Input     32 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 2     
+	   7 Input      5 Bit        Muxes := 1     
+	  12 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 1     
+	  17 Input      4 Bit        Muxes := 1     
+	  13 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	  13 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 36    
+	  12 Input      1 Bit        Muxes := 8     
+	  11 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+	  17 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module RISC_V_top 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     24 Bit        Muxes := 2     
+Module decoder_riscv 
+Detailed RTL Component Info : 
++---Muxes : 
+	   7 Input      5 Bit        Muxes := 1     
+	  12 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 1     
+	  13 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	  13 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	  12 Input      1 Bit        Muxes := 8     
+	  11 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+Module IM 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input     32 Bit        Muxes := 1     
+Module RF 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 31    
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	  11 Input     32 Bit        Muxes := 1     
+	  17 Input      4 Bit        Muxes := 1     
+	  17 Input      1 Bit        Muxes := 1     
+Module data_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---RAMs : 
+	               8K Bit         RAMs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "dut_dec/alu_op_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "dut_dec/illegal_instr_o" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port rst
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[31]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[30]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[29]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[28]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[27]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[26]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[25]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[24]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[23]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[22]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[21]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[20]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[19]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[18]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[17]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[16]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[15]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[14]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[13]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[12]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[11]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[10]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[9]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[8]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[7]
+WARNING: [Synth 8-3331] design RISC_V_top has unconnected port IN[6]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_34/\PC_reg[1] )
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[31] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[31]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[31] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[31] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[30] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[30]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[30] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[30] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[29] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[29]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[29] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[29] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[28] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[28]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[28] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[28] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[27] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[27]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[27] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[27] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[26] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[26]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[26] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[26] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[25] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[25]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[25] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[25] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[24] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[24]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[24] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[24] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[23] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[23]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[23] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[23] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[22] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[22]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[22] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[22] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[21] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[21]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[21] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[21] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[20] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[20]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[20] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[20] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[19] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[19]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[19] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[19] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[18] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[18]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[18] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[18] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[17] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[17]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[17] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[17] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[16] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[16]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[16] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[16] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[15] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[15]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[15] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[15] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[14] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[14]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[14] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[14] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[13] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[13]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[13] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[13] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[12] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[12]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[12] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[12] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[11] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[11]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[11] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[11] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[10] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[10]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[10] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[10] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[9] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[9]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[9] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[9] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[8] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[8]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[8] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[8] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[7] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[7]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[7] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[7] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[6] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[6]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[6] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[6] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[5] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[5]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[5] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[5] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[4] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[4]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[4] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[4] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[3] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[3]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[3] with 2nd driver pin 'VCC' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[3] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[2] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[2]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[2] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[2] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[1] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[1]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[1] with 2nd driver pin 'VCC' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[1] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[0] with 1st driver pin 'dut_rf/ram_rf_inferred__0/out0[0]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[0] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[0] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:19]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[31] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[31]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[31] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[31] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[30] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[30]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[30] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[30] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[29] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[29]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[29] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[29] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[28] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[28]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[28] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[28] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[27] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[27]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[27] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[27] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[26] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[26]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[26] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[26] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[25] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[25]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[25] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[25] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[24] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[24]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[24] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[24] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[23] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[23]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[23] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[23] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[22] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[22]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[22] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[22] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[21] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[21]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[21] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[21] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[20] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[20]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[20] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[20] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[19] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[19]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[19] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[19] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[18] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[18]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[18] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[18] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[17] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[17]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[17] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[17] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[16] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[16]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[16] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[16] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[15] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[15]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[15] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[15] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[14] with 1st driver pin 'dut_rf/ram_rf_inferred__1/out0[14]' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out0[14] with 2nd driver pin 'GND' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[14] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[13] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[12] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[11] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[10] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[9] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[8] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[7] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[6] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[5] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[4] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[3] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[2] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[1] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net out0[0] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v:20]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_34/\PC_reg[0] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 748.457 ; gain = 450.102
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 752.105 ; gain = 453.750
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 752.105 ; gain = 453.750
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 752.105 ; gain = 453.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 752.105 ; gain = 453.750
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 752.105 ; gain = 453.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 752.105 ; gain = 453.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 752.105 ; gain = 453.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 752.105 ; gain = 453.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     8|
+|3     |LUT1   |     1|
+|4     |FDRE   |    30|
+|5     |IBUF   |     1|
+|6     |OBUF   |    32|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    73|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 752.105 ; gain = 453.750
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 192 critical warnings and 112 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 752.105 ; gain = 453.750
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 752.105 ; gain = 453.750
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 764.234 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 860.375 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 106 Warnings, 164 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 860.375 ; gain = 562.020
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 860.375 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.runs/synth_1/RISC_V_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file RISC_V_top_utilization_synth.rpt -pb RISC_V_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  1 03:10:06 2022...
