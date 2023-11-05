@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../mpsis.srcs/sources_1/new" \
+"../../../../mpsis.srcs/sources_1/new/decoder_riscv.v" \
+
+sv xil_defaultlib  --include "../../../../mpsis.srcs/sources_1/new" \
+"../../../../mpsis.srcs/sim_1/new/tb_decoder_riscv.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
